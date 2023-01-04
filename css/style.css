@@ -61,6 +61,31 @@ h3,p,a{
     text-decoration: none;
     font-size: 2rem;
     padding: 1rem;
+    display: block;
+    transition: color .3s ease-in-out;
+}
+/*Todos los que sean pares seran azules cuando pase el cursor arriva de ellos*/
+.navegacion a:nth-child(even):hover{
+    color: var(--sky);
+}
+/*Todos los que sean inpares seran azules cuando pase el cursor arriva de ellos*/
+
+.navegacion a:nth-child(odd):hover{
+    color: var(--sky);
+}
+
+.navegacion a:first-of-type{
+    margin-top: 5rem;
+}
+.navegacion{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40 rem;
+    padding: 3rem 4rem;
+    background-color: var(--black);
+
 }
 .hamburguesa span{
     background-color: var(--white);
