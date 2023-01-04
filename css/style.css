@@ -39,12 +39,39 @@ h3,p,a{
 .ocultar{
     display: none;
 }
+/*Creamos el boton de X dentro del html */
+.btn-cerrar{
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--white);
+    position: absolute;
+    top: 0;
+    right: 50px;
+    user-select: none;
 
+}
+.pantalla-completa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: 4;
+}
+
+/*Para hacer que se genere la manita al pasar el cursor por el boton */
+.btn-cerrar:hover{
+    cursor: pointer;
+}
 
 
 /* encabezado*/
+/* para poder usar los z-index debemos tener position relative y el mayor z index va ser el que este arriba del mas bajo*/
 .contenedor-navegacion{
     background-color: var(--black);
+    position: relative;
+    z-index: 5;
 }
 .contenido-navegacion{
     display: flex;
@@ -82,6 +109,7 @@ h3,p,a{
     top: 0;
     right: 0;
     bottom: 0;
+    height: 100vh;
     width: 40 rem;
     padding: 3rem 4rem;
     background-color: var(--black);
