@@ -19,6 +19,7 @@ const botonCerrar = () =>{
     const overlay = document.createElement('div');
     overlay.classList.add('pantalla-completa');
     const body = document.querySelector('body')
+    if(document.querySelectorAll('.pantalla-completa').length > 0) return;
     body.appendChild(overlay);
     btnCerrar.textContent = 'x';
     btnCerrar.classList.add('btn-cerrar');
