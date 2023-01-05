@@ -76,6 +76,22 @@ h3,p,a{
     cursor: pointer;
 }
 
+.btn{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+}
+.bordes{
+    border: 4px solid rgba(0,0,0,.5);
+}
+
+.btn:hover{
+    color: var(--white);
+    background-color: var(--black);
+}
 
 /* encabezado*/
 /* para poder usar los z-index debemos tener position relative y el mayor z index va ser el que este arriba del mas bajo*/
@@ -169,7 +185,7 @@ h3,p,a{
     position: absolute;
     z-index: 2;
     width: 100%;
-    height: 100%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
