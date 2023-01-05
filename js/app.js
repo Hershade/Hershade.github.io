@@ -24,17 +24,19 @@ const botonCerrar = () =>{
     btnCerrar.textContent = 'x';
     btnCerrar.classList.add('btn-cerrar');
     navegacion.appendChild(btnCerrar)
-    cerrarMenu(btnCerrar, overlay);
+    cerrarMenu(btnCerrar,overlay);
 }
 const cerrarMenu = (boton, overlay) =>{
     boton.addEventListener('click',()=>{
         navegacion.classList.add('ocultar');
         overlay.remove();
+        boton.remove();
     });
 
     /*Cuando le usuario haga click en el overlay se quitara el overlay y se cerrara el menu */
     overlay.onclick = function(){
         overlay.remove();
         navegacion.classList.add('ocultar');
+        boton.remove();
     }
 }
