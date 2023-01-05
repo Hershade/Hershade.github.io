@@ -40,6 +40,9 @@ h3,p,a{
 .ocultar{
     display: none;
 }
+img{
+    max-width: 100%;
+}
 /*Creamos el boton de X dentro del html */
 .btn-cerrar{
     font-size: 3rem;
@@ -218,8 +221,43 @@ h3,p,a{
     }
 }
 
-
 video{
     width: 100%;
     height: 100%;
+}
+
+/*Sobre nosotros*/
+.contenedor-nosotros{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5rem;
+}
+.texto-nosotros, .imagenes-nosotros{
+    flex: 0 0 calc(50% - 1rem);
+}
+.imagenes-nosotros{
+    display: flex;
+    justify-content: space-between;
+}
+.imagenes-nosotros img{
+    border-radius: 5px;
+}
+.imagen1, .imagenes2{
+    flex: 0 0 calc(50% - 1rem);
+}
+.imagenes2 img{
+    margin-bottom: 1rem;
+}
+
+/*Configuracion del texto*/
+.texto-nosotros .welcome{
+    font-size: 3rem;
+    color: var(--sky);
+}
+.texto-nosotros h1{
+    font-size: 5rem;
+}
+.texto-nosotros p{
+    font-size: 2rem;
+
 }
