@@ -109,6 +109,15 @@ img{
     background-color: var(--black);
 }
 
+/* Configuracion del boton contact*/
+.btn-rojo{
+    background-color: var(--black);
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 /* encabezado*/
 /* para poder usar los z-index debemos tener position relative y el mayor z index va ser el que este arriba del mas bajo*/
 .contenedor-navegacion{
@@ -228,9 +237,16 @@ video{
 
 /*Sobre nosotros*/
 .contenedor-nosotros{
-    display: flex;
-    justify-content: space-between;
     padding-top: 5rem;
+}
+/* configuracion para dispositivos mas grandes*/
+@media(min-width:768px){
+    .contenedor-nosotros{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+
 }
 .texto-nosotros, .imagenes-nosotros{
     flex: 0 0 calc(50% - 1rem);
@@ -251,13 +267,34 @@ video{
 
 /*Configuracion del texto*/
 .texto-nosotros .welcome{
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--sky);
+    text-align: center;
+}
+@media(min-width:768px){
+    .texto-nosotros .welcome{
+        text-align: left;
+    }
+    
+
 }
 .texto-nosotros h1{
     font-size: 5rem;
+    text-align: center;
+}
+@media(min-width:768px){
+    .texto-nosotros h1{
+        text-align: left;
+    }
+    
+
 }
 .texto-nosotros p{
     font-size: 2rem;
-
+    text-align: center;
+}
+@media(min-width:768px){
+    .texto-nosotros p{
+        text-align: left;
+    }
 }
