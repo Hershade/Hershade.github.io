@@ -109,6 +109,14 @@ img{
     background-color: var(--black);
 }
 
+/* .btn-negro{
+    background-color: var(--black);
+    border: none;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-family: var(--paragraphs);
+} */
+
 /* Configuracion del boton contact*/
 .btn-rojo{
     background-color: var(--black);
@@ -116,6 +124,17 @@ img{
     display: inline-block;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+.btn-negro{
+    background-color: var(--black);
+    border: none;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-family: var(--paragraphs);
+}
+.btn-negro{
+    cursor: pointer;
 }
 
 /* encabezado*/
@@ -297,4 +316,25 @@ video{
     .texto-nosotros p{
         text-align: left;
     }
+}
+
+.menu{
+    padding-top: 4rem;
+}
+/*Configuracion para la vista de los platillos*/
+.texto-platillos{
+    text-align: center;
+    font-size: 5rem;
+}
+/* configuracion de los botones del menu de platillos */
+
+
+.botones-platillos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.botones-platillos button{
+    flex: 0 0 calc(50% - 1rem);
+    padding: 1rem 3rem;
 }
