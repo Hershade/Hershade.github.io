@@ -585,3 +585,24 @@ video{
     padding: 2rem;
     font-size: 2rem;
 }
+
+/* scroll style */
+#goUp{
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 99;
+    background-color: black;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 48px;
+    width: 48px;
+}
+
+#goUp:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}

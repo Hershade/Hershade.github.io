@@ -25,11 +25,11 @@
                                 class="sky">ven</span></h2>
                     </div>
                     <nav class="navegacion ocultar">
-                        <a href="#">Inicio</a>
-                        <a href="#">Sobre Nosotros</a>
-                        <a href="#">Menú</a>
-                        <a href="#">Chef</a>
-                        <a href="#">Contacto</a>
+                        <!-- <a href="#inicio">Inicio</a> -->
+                        <a href="#nosotros" class="cerrar">Sobre Nosotros</a>
+                        <a href="#menu" class="cerrar-menu">Menú</a>
+                        <a href="#chef" class="cerrar-chef">Chef</a>
+                        <a href="#contacto" class="cerrar-contacto">Contacto</a>
                     </nav>
                     <div class="hamburguesa">
                         <span></span><span></span><span></span>
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </header>
-        <div class="contenedor-nosotros contenedor">
+        <div class="contenedor-nosotros contenedor" id="nosotros">
             <div class="texto-nosotros">
                 <p class="welcome">Welcome to!</p>
                 <h1>The Heaven Restaurant</h1>
@@ -71,7 +71,7 @@
             </div>
         </div>
 
-        <section class="menu contenedor">
+        <section class="menu contenedor" id="menu">
             <h2 class="texto-platillos">Platillos populares</h2>
             <div class="botones-platillos">
                 <button class="todos btn btn-negro">Todos</button>
@@ -201,7 +201,7 @@
             </div>
         </div>
 
-        <section class="chef contenedor">
+        <section class="chef contenedor" id="chef">
             <h2 class="btn btn-negro">Executive Chef</h2>
             <div class="contenido-chef">
                 <div class="texto-chef">
@@ -224,7 +224,7 @@
             </div>
         </section>
 
-        <div class="formulario-contacto contenedor">
+        <div class="formulario-contacto contenedor" id="contacto">
 
             <div class="informacion-contacto">
                 <h3>Contact Developer</h3>
@@ -294,6 +294,7 @@
         </div>
         <footer class="footer">
             <p>All rights reserved &copy; 2023 The Heaven Restaurant </p>
+            <button id="goUp" onclick="topFunction()" title="Go to Top"><i class='fas fa-chevron-circle-up' style='font-size:36px'></i></button>
         </footer>
         <script src="js/app.js"></script>
 

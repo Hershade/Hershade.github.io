@@ -1,20 +1,31 @@
+const itemNav = document.querySelector('.cerrar');
+const itemMenu = document.querySelector('.cerrar-menu');
+const itemChef = document.querySelector('.cerrar-chef');
+const itemContacto = document.querySelector('.cerrar-contacto');
+
+let mybutton = document.getElementById('goUp')
+
+
+// when the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {showScroll()};
+
 const menu = document.querySelector('.hamburguesa');
 const navegacion = document.querySelector('.navegacion');
 const imagenes = document.querySelectorAll('img');
 const btnTodos = document.querySelector('.todos');
 const btnEnsaladas = document.querySelector('.ensaladas');
-const btnPasta = document.querySelector('.pasta')
-const btnPizza = document.querySelector('.pizza')
-const btnPostre = document.querySelector('.postres')
-const contenedorPlatillos = document.querySelector('.platillos')
-
+const btnPasta = document.querySelector('.pasta');
+const btnPizza = document.querySelector('.pizza');
+const btnPostre = document.querySelector('.postres');
 document.addEventListener('DOMContentLoaded', () => {
     eventos();
     platillos();
 });
 
+
 const eventos = () => {
     menu.addEventListener('click', abrirMenu);
+    // contacto.addEventListener('click', cerrarOverlay)
 }
 const abrirMenu = () => {
     navegacion.classList.remove('ocultar');
@@ -56,6 +67,32 @@ const cerrarMenu = (boton, overlay) => {
         overlay.remove();
         boton.remove();
     });
+    
+    function cerrarOverlay () {
+        btn = document.querySelector('.btn-cerrar')
+        over = document.querySelector('.pantalla-completa')
+
+        if(btn != undefined && over != undefined){
+            // btn.addEventListener('click', btn )
+            over.remove();
+            navegacion.classList.add('ocultar');
+            btn.remove();
+        } 
+    }
+    
+    itemNav.onclick = function(){
+        cerrarOverlay()
+    }
+    itemMenu.onclick = function (){
+        cerrarOverlay()
+    }
+    itemChef.onclick = function(){
+        cerrarOverlay()
+    }
+    itemContacto.onclick = function (){
+        cerrarOverlay()
+    }
+
 
     /*Cuando le usuario haga click en el overlay se quitara el overlay y se cerrara el menu */
     overlay.onclick = function () {
@@ -110,3 +147,29 @@ const limpiarHtml = (contenedor) => {
         contenedor.removeChild(contenedor.firstChild);
     }
 }
+var rootElement = document.documentElement
+
+// top button
+function scrollFunction() {
+    rootElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+}
+function showScroll (){
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+        console.log("Oiiiiii")
+        mybutton.style.display = "block"; 
+    } else {
+        mybutton.style.display = "none";
+        console.log("No oi")
+    }
+} 
+
+// when the user clicks on the button, scroll to the top od the document
+// function topFunction() {
+//     document.body.scrollTop = 0;
+//     document.documentElement.scrollTop = 0;
+// }
+
+goUp.addEventListener("click", scrollFunction)
