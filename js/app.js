@@ -17,6 +17,8 @@ const btnEnsaladas = document.querySelector('.ensaladas');
 const btnPasta = document.querySelector('.pasta');
 const btnPizza = document.querySelector('.pizza');
 const btnPostre = document.querySelector('.postres');
+const contenedorPlatillos = document.querySelector('.platillos')
+
 document.addEventListener('DOMContentLoaded', () => {
     eventos();
     platillos();
